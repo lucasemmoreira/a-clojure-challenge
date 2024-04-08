@@ -48,3 +48,9 @@ Given the function **subtotal** defined in **invoice-item.clj** in this repo, wr
 ## The solution
 
 This challenge was solved in 5h52m. It was an interesting challenge that I had to learn about specs and how to use them.
+
+To run all the tests
+
+```
+clj -X:test
+```
