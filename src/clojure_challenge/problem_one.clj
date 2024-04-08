@@ -1,7 +1,5 @@
 (ns clojure-challenge.problem-one)
 
-(def invoice (clojure.edn/read-string (slurp "resources/invoice.edn")))
-
 (defn tax-condition
   "tax condition defined. A specific category and rate. I would
    write here the why."
@@ -21,7 +19,4 @@
     (and (tax-condition invoice) (retention-condition invoice)) false
     (or (tax-condition invoice) (retention-condition invoice)) true))
 
-(def problem-one-solution
-  (->> invoice
-       :invoice/items
-       (filter full-condition)))
+

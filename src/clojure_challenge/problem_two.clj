@@ -1,9 +1,6 @@
 (ns clojure-challenge.problem-two
-  (:require [clojure.data.json :refer [read-str]]
-            [clojure.set]
+  (:require [clojure.set]
             [invoice-spec :as spec]))
-
-(def invoice (read-str (slurp "resources/invoice.json") :key-fn keyword))
 
 (defn str->date
   "simple method to turn string to date in a specific format.
@@ -47,9 +44,3 @@
   {:invoice/issue-date (str->date issue_date)
    :invoice/customer (customer-spec customer)
    :invoice/items (mapv item-spec items)})
-
-
-(def solution-problem-two
-  (-> invoice
-      invoice-spec
-      (spec/valid?)))
