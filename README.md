@@ -54,3 +54,5 @@ To run all the tests
 ```
 clj -X:test
 ```
+
+The also aspect that I learned about was how to setup a project with emacs, cider and clojure cli.
